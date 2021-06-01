@@ -1,8 +1,9 @@
-import React from "react"
+import React from "react";
+import { Link } from 'react-router-dom';
 
-const loginUser = async (e) => {
+const loginUser = async (e, handleLogin) => {
     e.preventDefault();
-    console.log('about to post sign up req');
+    console.log('about to post login req');
     // call should be to whatever port your Django backend is hosted at
     let res = await fetch('http://localhost:8000/users/login', {
         mode: 'cors',
@@ -17,14 +18,17 @@ const loginUser = async (e) => {
     });
     let userDetails = await res.json();
     // this.setState({ redirect: `/myinfo`}) REDIRECT TO MY INFO PAGE
-    console.log("response recieved : ")
-    console.log(userDetails);
+    console.log("response recieved : ");
+    // console.log(typeof(handleLogin));
+    // console.log(typeof(handleLogin.handleLogin));
+    // console.log(handleLogin.handleLogin);
+    handleLogin(userDetails);
 };
 
-const Login = () => {
+const Login = (props) => {
     return (
         <div className="">
-            <form onSubmit={(e) => loginUser(e)}>
+            <form onSubmit={(e) => loginUser(e, props.handleLogin)}>
                 <h1>Login:</h1>
                 <input type="text" className="form-control" name="username" placeholder="Username" />
                 <br/>
@@ -32,6 +36,7 @@ const Login = () => {
                 <br/>
                 <button type="submit" className="btn btn-outline-info">Submit</button>
             </form>
+            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </div>
     )
 }
