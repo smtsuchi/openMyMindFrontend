@@ -12,7 +12,7 @@ const App = () => {
   const [user, setUser] = useState()
   
   const handleLogout = () => {
-    setUser({});
+    setUser();
     // setUsername("");
     // setPassword("");
     localStorage.clear();

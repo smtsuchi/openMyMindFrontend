@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home = (props) => {
     // Logged In
-  if (props.user.username) {
+  if (props.user) {
       console.log(props.user);
       console.log(props.handleLogout)
     return (
