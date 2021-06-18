@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
 // import axios from 'axios';
-import './App.css';
-import Home from './view/auth/Home';
+import "./css/App.css"
+import Home from './view/orientation/Home';
 import Login from './view/auth/Login';
 import SignUp from './view/auth/SignUp';
 
@@ -38,7 +38,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Open My Mind</h1>
+      {/* <h1>Open My Mind</h1> */}
       <Router>
         <Switch>
           <Route exact path = "/" render={() => <Home handleLogout = {handleLogout} user = {user}/> }/>

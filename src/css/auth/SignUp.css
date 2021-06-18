@@ -1,0 +1,19 @@
+.signup-grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+        'signup-label'
+        'signup-firstname'
+        'signup-lastname'
+        'signup-username'
+        'signup-email'
+        'signup-password'
+        'signup-confirmpass';
+}
+.signup-label {grid-area: 'signup-label';}
+.signup-firstname {grid-area: 'signup-firstname';}
+.signup-lastname {grid-area: 'signup-lastname';}
+.signup-username {grid-area: 'signup-username';}
+.signup-email {grid-area: 'signup-email';}
+.signup-password {grid-area: 'signup-password';}
+.signup-confirmpass {grid-area: 'signup-confirmpass';}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import "../../css/auth/Login.css"
 
 const loginUser = async (e, handleLogin) => {
     e.preventDefault();
@@ -27,8 +28,8 @@ const loginUser = async (e, handleLogin) => {
 
 const Login = (props) => {
     return (
-        <div className="">
-            <form onSubmit={(e) => loginUser(e, props.handleLogin)}>
+        <div>
+            <form className="login-grid" onSubmit={(e) => loginUser(e, props.handleLogin)}>
                 <h1>Login:</h1>
                 <input type="text" className="form-control" name="username" placeholder="Username" />
                 <br/>

@@ -1,4 +1,5 @@
 import React from "react"
+import "../../css/auth/SignUp.css"
 
 const registerUser = async (e) => {
     e.preventDefault();
@@ -28,19 +29,19 @@ const registerUser = async (e) => {
 const SignUp = () => {
     return (
         <div className="">
-            <form onSubmit={(e) => registerUser(e)}>
-                <h1>Login:</h1>
-                <input type="text" className="form-control" name="first_name" placeholder="First Name" />
+            <form className="signup-grid" onSubmit={(e) => registerUser(e)}>
+                <h1 className="signup-label">Sign Up:</h1>
+                <input type="text" className="form-control signup-firstname" name="first_name" placeholder="First Name" />
                 <br/>
-                <input type="text" className="form-control" name="last_name" placeholder="Last Name" />
+                <input type="text" className="form-control signup-lastname" name="last_name" placeholder="Last Name" />
                 <br/>
-                <input type="text" className="form-control" name="username" placeholder="Username" />
+                <input type="text" className="form-control  signup-username" name="username" placeholder="Username" />
                 <br/>
-                <input type="text" className="form-control" name="email" placeholder="Email" />
+                <input type="text" className="form-control signup-email" name="email" placeholder="Email" />
                 <br/>
-                <input type="password" className="form-control" name="password" placeholder="Password" />
+                <input type="password" className="form-control signup-password" name="password" placeholder="Password" />
                 <br/>
-                <input type="password" className="form-control" name="confirm_pass" placeholder="Confirm Password" />
+                <input type="password" className="form-control signup-confirmpass" name="confirm_pass" placeholder="Confirm Password" />
                 <br/>
                 <button type="submit" className="btn btn-outline-info">Submit</button>
             </form>

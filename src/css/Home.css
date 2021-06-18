@@ -1,0 +1,57 @@
+.btn {
+    display: block;
+    max-width: 380px;
+    width: 100%;
+    align-self: center;
+    font-weight: 400;
+    margin-top: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 6px 12px;
+    font-size: 18px;
+    line-height: 1.42857143;
+    border-radius: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #72d3fe;
+}
+.btn:hover {
+    opacity: .7;
+}
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+.home_image {
+  background-color: #03b0c1;
+  background-image: url("../images/home_page_art_3.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 60vw;
+  width: 50vw;
+  height: 96vh;
+}
+.flexbox {
+  display: flex;
+}
+.footnote {
+  height: 4vh;
+}
+.home_flex {
+  padding: 36px;
+}
+.home_h1 {
+  font-size: 64px;
+  margin-bottom: 48px;
+}
+.home_h3 {
+  font-size: 31px;
+}
